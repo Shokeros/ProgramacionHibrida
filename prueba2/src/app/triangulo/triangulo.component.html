@@ -1,0 +1,47 @@
+<ion-list>
+  <ion-item>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Triángulo</ion-card-title>
+        <ion-card-subtitle>Perímetro</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        El perímetro de un triángulo es la suma de las longitudes 
+        de sus tres lados. En otras palabras, es la medida total del 
+        contorno o borde del triángulo.
+      </ion-card-content>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <p style="color: red; font-style: italic; font-weight: bold;">Donde:</p>
+              <p style="color: red; font-style: italic; font-weight: bold;">P: perímetro</p>
+              <p style="color: red; font-style: italic; font-weight: bold;">a: lado A</p>
+              <p style="color: red; font-style: italic; font-weight: bold;">b: lado B</p>
+              <p style="color: red; font-style: italic; font-weight: bold;">c: lado C</p>
+            </ion-col>
+            <ion-col>
+              <img class="img1" alt="Círculo" src="assets/images/triangulopequeno.png" />
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="ladoAStr" type="number" label="Radio (cm)"  fill="solid" labelPlacement="floating" placeholder="Ingrese radio" required="true"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-input [(ngModel)]="ladoBStr" type="number" label="Radio (cm)"  fill="solid" labelPlacement="floating" placeholder="Ingrese radio" required="true"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-input [(ngModel)]="ladoCStr" type="number" label="Radio (cm)"  fill="solid" labelPlacement="floating" placeholder="Ingrese radio" required="true"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-button (click)="calcularPerimetroTriangulo()">CALCULAR EL PERÍMETRO</ion-button>
+</ion-item>
+<ion-item>
+  {{resultado}} 
+</ion-item>
+</ion-list>
